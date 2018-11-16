@@ -64,33 +64,35 @@ Let's get started!
   Formula Value: **$User.Id**
 
 #### Add the Quick Action to the Page Layout
-6. Add the 'Demo Request' quick action to the Opportunity Page Layout.
+1. Add the 'Demo Request' quick action to the Opportunity Page Layout.
 
-  From Object Manager, Select Opportunity > Page Layouts > Opportunity Layout
+2. From Object Manager, Select Opportunity > Page Layouts > Opportunity Layout
   
-  Locate the **'Salesforce Mobile and Lightning Experience Actions'** section of the layout and click the wrench icon to override the default actions.
+3. Locate the **'Salesforce Mobile and Lightning Experience Actions'** section of the layout and click the wrench icon to override the default actions.
   
-  Select the **'Mobile & Lightning Actions'** section from the layout toolbar and drag the **'Demo Request'** action into the **Salesforce Mobile and Lightning Experience Actions'** section of the layout.
+4. Select the **'Mobile & Lightning Actions'** section from the layout toolbar and drag the **'Demo Request'** action into the **Salesforce Mobile and Lightning Experience Actions'** section of the layout.
 
 #### Add the Demo Requests related list to the Page Layout
-7. Add the 'Demo Requests' related list to the Opportunity Page Layout.
+1. Add the 'Demo Requests' related list to the Opportunity Page Layout.
 
-  Scroll down to the 'Related Lists' section from the layout toolbar and drag the 'Demo Requests' list onto the page layout.
+2. Scroll down to the 'Related Lists' section from the layout toolbar and drag the 'Demo Requests' list onto the page layout.
  
-8. Save the changes to the Opportunity Page Layout.
+3. Save the changes to the Opportunity Page Layout.
 
 ### Use the Quick Action to Create a Record
 
-Click the 'App Launcher' icon and select the 'Sales' app.  Use the Search box at the top of the page to locate and open the **'Express Logistics Portable Truck Generator'** opportunity.  Add this opportunity to your Salesforce favorites for quick reference in future steps.
+1. Click the 'App Launcher' icon and select the 'Sales' app.  Use the Search box at the top of the page to locate and open the **'Express Logistics Portable Truck Generator'** opportunity.  Add this opportunity to your Salesforce favorites for quick reference in future steps.
 
-Click the **'Demo Request'** quick action from the action section of the Opportunity detail page and provide values for the required fields and Save to create the record.  Note that the new record will appear in the related list and include values for the fields on the quick action layout along with those listed in the predefined values section.
+2. Click the **'Demo Request'** quick action from the action section of the Opportunity detail page and provide values for the required fields and Save to create the record.  Note that the new record will appear in the related list and include values for the fields on the quick action layout along with those listed in the predefined values section.
 
 ## Use Case #2 - Conditional Limits and Quick Actions
+
+
 “Sam has received positive feedback from the Sales Reps regarding the new Quick Action.  This feature has made it very easy to create and follow-up on demo requests for customers. In fact, this feature is a bit too easy to use and demo requests are being submitted for Accounts and Customers that are not eligible for the demo equipment.  Sam states that the following conditions should be met before demo requests are created.
 
-Demo Requests should only be made for accounts rated as ‘Hot’
+**Demo Requests should only be made for accounts rated as ‘Hot’**
 
-The Opportunity stage should be ‘Value Proposition’
+**The Opportunity stage should be ‘Value Proposition’**
 
 
 ### Lightning Flow + Quick Actions + Conditional Visibility
@@ -99,11 +101,11 @@ At present, there is no configurable feature that provides Admins & App Builders
 
 #### Review the Flow:
 
-Navigate to Setup > Process Automation > Flows
+1. Navigate to Setup > Process Automation > Flows
 
-Click the **Demo Request Screen Flow** to open the flow details.
+2. Click the **Demo Request Screen Flow** to open the flow details.
 
-Note that this flow contains 4 elements as detailed below:
+3. Note that this flow contains 4 elements as detailed below:
 
 Item #1 - Screen Element with instructions
 
@@ -112,6 +114,8 @@ Item #2 - Screen Element - User Input for the Demo Request record
 Item #3 - Quick Action - Uses the quick action previously defined to create the record 
 
 Item #4 - Screen Element - Confirmation message displayed after record is created.
+
+
 
 
 ### Include the Flow in the Opportunity Record Page using Lightning App Builder
@@ -129,7 +133,7 @@ Item #4 - Screen Element - Confirmation message displayed after record is create
 
 5. Set Component Visibility values for the flow component.  To start, click **'Add Filter'**
 
-####**Filter 1:**
+#### **Filter 1:**
 
 Filter Type = **Advanced**
 
@@ -143,7 +147,7 @@ Click **Done** to save.
 
 
 
-####**Filter 2**
+#### **Filter 2**
 
 Click **Add Filter**
 
@@ -161,13 +165,13 @@ Click **Save** to Save the changes to the App Builder page.
 
 #### Test the Lightning Record Page Changes
 
-Open the **Express Logistics Portable Truck Generator** opportunity and notice that the Lightning Flow isn't visible (as expected).
+1. Open the **Express Logistics Portable Truck Generator** opportunity and notice that the Lightning Flow isn't visible (as expected).
 
-Now, open the 'Express Logistics and Transport' account and press 'Edit'.  Change the 'Rating' value to 'Hot' and save the changes.
+2. Now, open the 'Express Logistics and Transport' account and press 'Edit'.  Change the 'Rating' value to 'Hot' and save the changes.
 
-Reopen the **Express Logistics Portable Truck Generators** opportunity and you'll see that the Lightning Flow **IS** now visible for use by the reps as this record now meets the conditions defined by the visibility filters.
+3. Reopen the **Express Logistics Portable Truck Generators** opportunity and you'll see that the Lightning Flow **IS** now visible for use by the reps as this record now meets the conditions defined by the visibility filters.
 
-Use the Screen Flow to create a new Demo Request record -- be sure to complete the flow to trigger the related list refresh.
+4. Use the Screen Flow to create a new Demo Request record -- be sure to complete the flow to trigger the related list refresh.
 
 ## Customizing the Demo Request Detail Page
 
