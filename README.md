@@ -21,8 +21,15 @@ https://random-demo-org-dev-ed.lightning.force.com/packagingSetupUI/ipLanding.ap
 6. Assign Permission Set. Setup > Users > Permission Sets > Demo Request User.  Click 'Manage Assignments'. Select 'USER' then 'Add'.
 
 ## Use Case #1 - Sales Users Need the Ability to Track Demo Requests in Salesforce
+“XYZ Widgets has implemented Sale Cloud features that enable their team to perform account management and opportunity tracking in Salesforce. Sam, the Sales Manager, would like to extend the current functionality to allow the Reps to request demo equipment for customers via Salesforce.  
 
+Working with her team, she has identified the following requirements:
 
+The demo request feature should be accessible from the Opportunity 
+Sales Reps should provide a reason for the eval request
+The request should indicate the duration of the eval period
+A Request Date should be provided in the new record
+Requests should list the associated Account and Opportunity
 
 
 ### Solution Review - Demo Request Custom Object and Quick Action
@@ -64,7 +71,10 @@ Click the 'App Launcher' icon and select the 'Sales' app.  Use the Search box at
 Click the **'Demo Request'** quick action from the action section of the Opportunity detail page and provide values for the required fields and Save to create the record.  Note that the new record will appear in the related list and include values for the fields on the quick action layout along with those listed in the predefined values section.
 
 ## Use Case #2 - Conditional Limits and Quick Actions
+“Sam has received positive feedback from the Sales Reps regarding the new Quick Action.  This feature has made it very easy to create and follow-up on demo requests for customers. In fact, this feature is a bit too easy to use and demo requests are being submitted for Accounts and Customers that are not eligible for the demo equipment.  Sam states that the following conditions should be met before demo requests are created.
 
+Demo Requests should only be made for accounts rated as ‘Hot’
+The Opportunity stage should be ‘Value Proposition’
 
 
 ### Lightning Flow + Quick Actions + Conditional Visibility
@@ -131,7 +141,31 @@ Let's look at ways to highligh the status values associated with the Demo Reques
 1. Click the **Setup** gear at the top and then **'Edit Page'** to lauch **Lightning App Builder**.
 2. Drag the **Path** component from the left to just under the Highlights panel on the screen
 3. Configure Path options using the menu on the right.  Set the values as follows:
-  
+  Format: **Linear**
+  Hide path update button: **Checked**
+4. Click **'Set up Path'**.  The Path Settings page will appear -- and press the **'Enable'** button to activate the feature.
+5. Return to Lightning App Builder tab and click **Save** then **Back** to see the Path component on the page.
+
+Note how the path feature is configured to use the values defined in the Status field and how well this calls out the current status for the selected record.  
+
+
+# Wrap-Up
+
+In just a few short steps, we've see how we can leverage the power of features 
+
+Clearly, the configuration efforts just completed don't constitue fully working solutions but 
+
+
+
+# Learn More with these Trailhead Modules
+
+**Lightning Flow** - https://trailhead.salesforce.com/content/learn/modules/business_process_automation
+
+**Lightning App Builder** - https://trailhead.salesforce.com/en/content/learn/modules/lightning_app_builder
+
+**Lightning Experience Customization** - https://trailhead.salesforce.com/content/learn/modules/lex_customization
+
+
 
 
 
